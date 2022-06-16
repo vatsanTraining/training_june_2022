@@ -1,0 +1,4 @@
+In the LoginServlet if the userName is india and password is india forward to success.jsp
+if its not matching forward to login.jsp
+
+

@@ -51,6 +51,10 @@ public class WelcomeServlet extends HttpServlet {
 		
 	   //System.out.println("DO GET CALLED **************");
 		
+		String reqPath = request.getRequestURI();
+		
+		System.out.println(reqPath);
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/welcome.jsp");
 		
 		 dispatcher.forward(request, response);
