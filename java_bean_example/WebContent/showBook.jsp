@@ -22,6 +22,11 @@ border-collapse: collapse;
 
 </head>
 <body>
+
+<%@ include file="header.html"%>
+
+<jsp:useBean id="service" class="com.training.services.BookService" scope="request"/>
+
 <table>
 	<tr>
 		<th>Book Number</th>
@@ -29,6 +34,9 @@ border-collapse: collapse;
 		<th>Author Name</th>
 		<th>Price</th>
 	</tr>
+	
+	<c:set var="books" value="${service.findAll()}"/>
+	
 <c:forEach items="${books}" var="eachBook">
 
 <tr>
@@ -36,12 +44,16 @@ border-collapse: collapse;
 	<td><c:out value="${eachBook.bookName}"/>	</td>
 	<td><c:out value="${eachBook.authorName}"/> </td>
 	<td><c:out value="${eachBook.price}"/>	</td>
+	
+	
 	<td><a href="edit?id=<c:out value='${eachBook.bookNumber}' />">Edit</a></td>
 	<td><a href="delete?id=<c:out value='${eachBook.bookNumber}' />">Delete</a></td>
 </tr>
 
 </c:forEach>
 </table>
+<hr/>
+<jsp:include page="footer.jsp"/>
 
 </body>
 </html>

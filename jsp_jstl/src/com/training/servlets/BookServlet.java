@@ -28,7 +28,6 @@ public class BookServlet extends HttpServlet {
      */
     public BookServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
     
 	@Override
@@ -108,6 +107,7 @@ public class BookServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String strBookNumber = request.getParameter("bookNumber");
