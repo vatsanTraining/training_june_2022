@@ -25,8 +25,8 @@ border-collapse: collapse;
 
 <%@ include file="header.html"%>
 
-<jsp:useBean id="service" class="com.training.services.BookService" scope="request"/>
-
+<%-- <jsp:useBean id="service" class="com.training.services.BookService" scope="request"/>
+ --%>
 <table>
 	<tr>
 		<th>Book Number</th>
@@ -35,7 +35,7 @@ border-collapse: collapse;
 		<th>Price</th>
 	</tr>
 	
-	<c:set var="books" value="${service.findAll()}"/>
+<%-- 	<c:set var="books" value="${service.findAll()}"/> --%>
 	
 <c:forEach items="${books}" var="eachBook">
 

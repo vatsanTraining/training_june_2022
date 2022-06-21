@@ -15,7 +15,6 @@
 <div>
 <p style="color: red"><c:out value="${param.errorMessage}"/></p>
 
-
 <form action="handleLogin.jsp">
 	<label for="">User Name</label>
 	<input type="text" name="userName" />

@@ -52,4 +52,10 @@ public class BookRepository implements CrudRepository<Book> {
 			return found;
 	}
 
+	@Override
+	public Book removeById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

@@ -5,4 +5,5 @@ public interface CrudRepository<T>{
 	public T add(T t);
 	public List<T> findAll();
 	public List<T> findByName(String bookName);
+	public T removeById(int id);
 }
