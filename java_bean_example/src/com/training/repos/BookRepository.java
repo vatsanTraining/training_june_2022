@@ -58,4 +58,16 @@ public class BookRepository implements CrudRepository<Book> {
 		return null;
 	}
 
+	@Override
+	public Book update(Book t) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Book findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

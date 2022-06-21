@@ -70,6 +70,31 @@ public class DbBookRepository implements CrudRepository<Book> {
 		
 		return bookList;
 	}
+	
+	public Book update(Book t) {
+		
+		int rowsUpdated=0;
+		String sql = "update vats_book set bookName=?, authorName=?,price=?  where bookNumber =?";
+		try(PreparedStatement pstmt = con.prepareStatement(sql);
+	) {
+			
+			pstmt.setString(1, t.getBookName());
+			pstmt.setString(2, t.getAuthorName());
+			pstmt.setDouble(3, t.getPrice());
+			
+			pstmt.setInt(4, t.getBookNumber());
+
+			rowsUpdated = pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+		
+		return rowsUpdated==1?t:null;
+
+		
+	}
 
 	@Override
 	public List<Book> findByName(String bookName) {
@@ -82,7 +107,7 @@ public class DbBookRepository implements CrudRepository<Book> {
 
 		int rowDeleted=0;
 		
-		String sql = "delete from vats_book where bookNumber =?";
+		String sql = "delete from vats_book where bookNumber=?";
 				
 		try(			PreparedStatement pstmt = con.prepareStatement(sql);
 ) {
@@ -103,14 +128,13 @@ public class DbBookRepository implements CrudRepository<Book> {
 	
 	}
 
-	private Book findById(int id) {
+	public Book findById(int id) {
 		
 			String sql = "select * from vats_book where bookNumber=?";
 		
 		Book foundBook  = null;		
-		try(			PreparedStatement pstmt = con.prepareStatement(sql);
-) {
-			
+		try(PreparedStatement pstmt = con.prepareStatement(sql);) {
+			pstmt.setInt(1, id);
 			
 			 ResultSet rs = pstmt.executeQuery();
 			 

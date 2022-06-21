@@ -38,6 +38,18 @@ public class BookService {
 		return this.repo.findByName(bookName);
 	}
 	
+	public Book remove(int id) {
+		
+		return this.repo.removeById(id);
+	}
 	
+	public Book update(Book book) {
+		return this.repo.update(book);
+	}
+
+	public Book findById(int id) {
+		
+		return this.repo.findById(id);
+	}
 	
 }
