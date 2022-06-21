@@ -11,6 +11,8 @@
 
 table{
 border: 1px solid blue;
+margin-left: auto;
+margin-right: auto;
 }
 tr,th,td{
 
@@ -33,6 +35,8 @@ border-collapse: collapse;
 		<th>Book Name</th>
 		<th>Author Name</th>
 		<th>Price</th>
+		<th>Action</th>
+		<th>Action</th>
 	</tr>
 	
 <%-- 	<c:set var="books" value="${service.findAll()}"/> --%>
