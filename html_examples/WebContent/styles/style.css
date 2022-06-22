@@ -1,0 +1,44 @@
+@charset "ISO-8859-1";
+
+h4{
+	
+color :#AA12CC;	
+}
+
+.centerText{
+	
+	text-align: center;
+}
+.light{
+	
+color: #ffe6e6	
+}
+.dark{
+	
+color: #AA12cc;	
+}
+
+.darker{
+color:#ff0000;
+	
+}
+
+
+table{
+	border: 1px solid blue;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+th,tr,td{
+	
+	border: 1px solid blue;
+}
+
+.background{
+	
+	background-image: url("../images/bgimage2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

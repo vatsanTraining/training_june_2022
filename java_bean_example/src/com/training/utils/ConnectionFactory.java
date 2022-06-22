@@ -6,7 +6,7 @@ import com.training.services.BookService;
 
 public class ConnectionFactory {
 
-	public static Connection getPostgressConnection() throws InstantiationException, IllegalAccessException {
+	public static Connection getPostgressConnection()  {
 		
 		Connection con =null;
 		

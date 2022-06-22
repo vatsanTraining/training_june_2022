@@ -49,17 +49,10 @@ public class BookServlet extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
 
-		try {
 			con = ConnectionFactory.getPostgressConnection();
 			
 			 service = new BookService(con);
 			
-			System.out.println("Connection:="+ con);
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		}
 	}
 
 
