@@ -15,7 +15,6 @@
 <div><label for="author">Author Name</label><input type="text" name="authorName" /></div>
 <div><label for="price">Price</label><input type="text" name="price"/></div>
 
-
 <input type="submit" value="Add">
 </form>
 
