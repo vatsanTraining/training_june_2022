@@ -40,8 +40,8 @@ function processRequest(){
 		if(text.trim()=='valid'){
              color ='green';
 		}
-		msgFld.style.color=color;
 	     msgFld.innerHTML = text;
+			msgFld.setAttribute('style','color:'+color);
 
 	}
 	
