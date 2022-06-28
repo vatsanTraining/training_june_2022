@@ -11,7 +11,6 @@ function callServlet(){
 	  
 		usrNameFld.addEventListener("blur",function(){
 			
-               console.log("inside event handler")
 			var userName = usrNameFld.value;
 			
 			var url = "validate?userName="+userName;

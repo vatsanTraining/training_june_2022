@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Event Handling</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script type="text/javascript">
+
+function hidePara() {
+	
+	var para1 = document.getElementById("para1");
+	
+	para1.style.display='none';
+	
+	var hideBtn = document.getElementById("hideBtn");
+
+	hideBtn.style.display='none';
+
+}
+
+</script>
+</head>
+<body>
+
+
+<button id="hideBtn"  class="btn btn-info">Hide</button>
+<button id="showBtn" onclick="showPara()" class="btn btn-info">Show</button>
+
+<p id="para1">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente vitae modi commodi ipsum provident sequi accusamus totam sint cumque quia aspernatur cum doloremque qui nihil praesentium asperiores voluptate libero! Saepe.
+</p>
+
+<script type="text/javascript">
+
+var showBtn = document.getElementById("showBtn");
+
+showBtn.style.display='none';
+
+var hideBtn = document.getElementById("hideBtn");
+// calling hidePara() will invoke the function , 
+//it will not invoked on the occurance of 
+// click event
+// hideBtn.addEventListener('click',hidePara);
+
+hideBtn.addEventListener('click',function(){
+	
+var para1 = document.getElementById("para1");
+	
+	para1.style.display='none';
+	
+	var hideBtn = document.getElementById("hideBtn");
+
+	hideBtn.style.display='none';
+
+});
+
+</script>
+</body>
+</html>
