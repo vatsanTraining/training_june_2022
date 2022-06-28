@@ -1,0 +1,129 @@
+@charset "ISO-8859-1";
+
+/* Global Selector */
+
+*{
+	
+margin: 0;
+padding: 0;	
+}
+
+/* Id Selector */
+
+#title{
+	
+	text-align: center;
+	font-family: serif;
+	font-size: 1.2em;
+	color: #aa11BB;
+	
+}
+
+/* Class Selector */
+
+.bigBox {
+	
+	width: 200px;
+	height: 100px;
+	border: 2px solid green;
+	display: inline-block;
+}
+
+
+.bigBox.effect{
+	
+	border-radius: 15px 20px 15px 20px;
+}
+
+/* Attribute Selector */
+
+
+img[alt="Book1"]{
+	
+	width: 200px;
+	height: 200px;
+	border: 3px solid gold;
+}
+
+/* Attribute Selector- * Stands for containing anywhere other symbols are ^ and $ */
+
+img[src*="right"]{
+	
+	width: 100px;
+	height: 100px;
+	border: 4px solid green;
+}
+
+
+/* Adjacent Selector represented by "+" symbol */
+
+section+p{
+	
+	 font-size: 1.4em;
+	 font-weight: bolder;
+	 color: #AABBCC;
+}
+
+/* Child Selector represented by ">" symbol */
+
+
+div>p{
+	
+	font-family: cursive;
+	font-weight: bold;
+		 color: #AA11DD;
+	
+}
+
+/* Pseudo Class */
+img:hover {
+	
+	width: 50px;
+	height: 50px;
+	
+}
+
+/* Pseudo Element  : Difference is : and :: */
+
+#first::first-letter {
+	
+	font-family: serif;
+	font-size: 1.5em;
+}
+
+/* Element Selector */
+table{
+	
+	border: 1px solid green;
+	border-collapse: collapse;
+}
+/* Group Selector */
+td,th,tr{
+	
+		border: 1px solid green;
+	
+}
+/* CSS Pseudo  Selector */
+tbody>tr:nth-child(odd){
+	
+	background-color: yellow;
+}
+
+/* CSS Pseudo  Class */
+
+input[type='text']:focus {
+	
+	font-size: 1.5em;
+	border: 2px solid blue;
+}
+/* CSS Pseudo  Class  attribute selector and adjacent selector used below */
+
+input[type='checkbox']:checked+label {
+	
+		border: 1px solid blue;
+}
+
+label:before {
+	content: "*";
+	color: red;
+}
