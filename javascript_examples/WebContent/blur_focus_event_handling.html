@@ -3,6 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Event Handling</title>
+<script type="text/javascript" src="scripts/cookies.js"></script>
 </head>
 <body>
 
@@ -20,6 +21,8 @@
 	
 <script type="text/javascript">
 
+readCookie();
+
 var firstName = document.getElementById("firstName");
 
 var code = document.getElementById("code");
@@ -27,6 +30,8 @@ var code = document.getElementById("code");
 firstName.addEventListener('blur',function(){
 	
 	 var nameEntered = firstName.value;
+	 document.cookie =name+'='+nameEntered;
+	 
 	 code.value = nameEntered.toUpperCase();
 
 	 
@@ -38,6 +43,8 @@ var lastName = document.getElementById("lastName");
 // place the generated code in the code field
 
 </script>	
+	
+	
 	
 </body>
 </html>
