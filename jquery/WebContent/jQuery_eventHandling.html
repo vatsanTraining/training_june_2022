@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Event Handling</title>
+<style type="text/css">
+
+.link{
+
+text-decoration: none;
+font-size: 1.2em;
+margin: 10px;
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+$(function() {
+	$("#showLink").hide();
+	
+	$("#hideLink").click(function(){
+		
+		$("#para1").hide();
+		
+		$("#hideLink").hide();
+		$("#showLink").show();
+
+
+	})
+	
+	
+$("#showLink").click(function(){
+		
+		$("#para1").show();
+		
+		$("#hideLink").show();
+		$("#showLink").hide();
+
+	})
+
+	$(".link").on('click',function(){
+		console.log($(this).html());
+	})
+});
+
+</script>
+</head>
+<body>
+
+<a href="javascript:void(0)" id="hideLink">Hide</a>
+<a href="javascript:void(0)" id="showLink">Show</a>
+
+<p id="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque odit incidunt reiciendis fugiat commodi ex ullam natus delectus perferendis officia vero sequi inventore voluptas necessitatibus quasi minima nihil molestias nesciunt.</p>
+
+<a href="javascript:void(0)" class="link">Home</a>
+<a href="javascript:void(0)" class="link">Contact</a>
+<a href="javascript:void(0)" class="link">Download</a>
+</body>
+</html>

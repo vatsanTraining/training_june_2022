@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Using Java Script Validation</title>
+</head>
+<body>
+
+<label id="msg"></label>
+<form action="welcome.html" id="regForm" onsubmit="return validate()">
+	<label>FirstName</label>
+		<input type="text" name="firstName" id="firstName"/> 
+			<label>Last Name</label>
+		
+		<input type="text" name="lastName" id="lastName"/>
+			<label>Email</label>
+		
+        <input type="text" name="email" id="email"/>
+
+<input type="submit" value="Register">
+
+	</form>
+<script type="text/javascript" src="scripts/validation.js"></script>
+</body>
+</html>

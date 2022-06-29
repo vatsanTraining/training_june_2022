@@ -7,11 +7,17 @@ function setCookie(){
 	var name ='bg_color'
 	var value ='green';
 	document.cookie =name+'='+value
+	
+	var name1 ='font_size'
+		var value1 ='15px';
+	document.cookie =name1+'='+value1
+
 }
 
 function readCookie(){
 		
-   var mycookie = document.cookie;
+   var mycookie = document.cookie
+;
 	alert(mycookie);
 		var cookieList =mycookie.split(";");
 			var sizeCookie =cookieList[0]

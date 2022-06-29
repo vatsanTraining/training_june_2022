@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>jQuery</title>
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+function load(){
+	
+	alert('I am load call back')
+}
+
+$(function() {
+	
+	 alert('i am ready call back')
+	$("#heading").css('color','green');
+
+	alert($("#heading").text());
+	
+});
+</script>
+
+</head>
+<body onload="load()">
+
+<h1 id="heading">Using jQuery</h1>
+
+
+</body>
+</html>
